@@ -1,5 +1,5 @@
 # Navigate to your project directory
-cd /path/to/your/project
+cd /home/adminssg/server/backend_postgres_ssg
 
 # Pull the latest changes from GitHub
 git pull origin master
