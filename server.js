@@ -159,6 +159,33 @@ app.post("/deploy", (req, res) => {
   res.status(200).send("Deployment initiated");
 });
 
+app.get("/status", (req, res) => {
+  pm2.list((err, list) => {
+    if (err) {
+      console.error("Error retrieving process list:", err);
+      return res.status(500).json({ error: "Internal Server Error" });
+    }
+
+    // Find your application in the process list
+    const appProcess = list.find((process) => process.name === "your-app-name");
+
+    if (!appProcess) {
+      return res.status(404).json({ error: "Application not found" });
+    }
+
+    // Construct and send the response
+    const response = {
+      name: appProcess.name,
+      status: appProcess.pm2_env.status,
+      pid: appProcess.pid,
+      memory: appProcess.monit.memory,
+      cpu: appProcess.monit.cpu,
+      // Add more fields as needed
+    };
+    res.json(response);
+  });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
