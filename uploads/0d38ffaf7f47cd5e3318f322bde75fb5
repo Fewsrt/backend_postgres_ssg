@@ -1,0 +1,13 @@
+﻿Publisher,Product Name,Metric,Cloud Pak or FlexPoint Bundle,Bundle Type,Metric Quantity,Product and Metric from IBM Catalog,Hybrid Product,Peak Date,Bundle Metric Contribution,Threshold,Threshold Delta,Imported Part Numbers,Needs Recalculation
+IBM,IBM Spectrum Scale Data Mgmt Edition,Terabyte,None,,<n/a>,Yes,No,,<n/a>,,,"",No
+IBM,IBM Spectrum Protect Suite - Front End,Tiered Terabytes,None,,<n/a>,Yes,No,,<n/a>,,,"",No
+IBM,"IBM SDK 5.0 for AIX Power 32, Java Technology",Unknown,None,,<n/a>,Yes,No,,<n/a>,,,"",No
+IBM,IBM Sterling Connect:Direct Solo Edition,PVU Full Capacity,None,,3600,Yes,No,02/08/2024,<n/a>,,,"",No
+IBM,IBM DB2 Enterprise Server Edition PVU Option,PVU Full Capacity,None,,6840,Yes,No,02/08/2024,<n/a>,,,E020CLL,No
+IBM,IBM Sterling Connect:Direct Solo Edition,PVU Subcapacity,None,,240,Yes,No,02/08/2024,<n/a>,,,"",No
+IBM,IBM DB2 Enterprise Server Edition PVU Option,PVU Subcapacity,None,,1920,Yes,No,02/08/2024,<n/a>,,,E020CLL,No
+IBM,IBM WebSphere Hybrid Edition,Virtual Processor Core,None,Cloud Pak,16,Yes,Yes,02/08/2024,<n/a>,,,"",No
+IBM,IBM Cloud Pak for Integration,Virtual Processor Core,None,Cloud Pak,45,Yes,Yes,02/08/2024,<n/a>,,,E0PPCLL,No
+IBM,IBM PowerHA SystemMirror for AIX Standard Edition,STG Tier,None,,<n/a>,Yes,No,,<n/a>,,,"",No
+IBM,AIX 7.2 Enterprise Edition,STG Tier,None,,<n/a>,Yes,No,,<n/a>,,,"",No
+IBM,AIX 7.1 Enterprise Edition,STG Tier,None,,<n/a>,Yes,No,,<n/a>,,,"",No
