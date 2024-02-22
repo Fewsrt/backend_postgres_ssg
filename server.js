@@ -168,7 +168,7 @@ app.get("/status", (req, res) => {
     }
 
     // Find your application in the process list
-    const appProcess = list.find((process) => process.name === "your-app-name");
+    const appProcess = list.find((process) => process.name === "server");
 
     if (!appProcess) {
       return res.status(404).json({ error: "Application not found" });
