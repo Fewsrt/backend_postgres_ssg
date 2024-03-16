@@ -15,7 +15,7 @@ const PORT = process.env.PORT
 
 const app = express();
 
-figlet("ILMT-SERVER", function (err, data) {
+figlet("ILMT SERVER", function (err, data) {
   if (err) {
     console.log("Something went wrong...");
     console.dir(err);
