@@ -126,3 +126,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Firebase service account JSON file
+ssgreports-c1304-firebase-adminsdk-53u72-3d65e63ba8.json
