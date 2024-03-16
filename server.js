@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const multer = require("multer");
 const csvParser = require("csv-parser");
@@ -7,9 +8,10 @@ const cors = require("cors");
 const pm2 = require("pm2");
 const bodyParser = require("body-parser");
 const admin = require("firebase-admin");
-const serviceAccount = require("./.firebase/service-account.json"); // Path to your service account key JSON file
+const serviceAccount = require(process.env.FIREBASE_SERVICE_ACCOUNT_KEY); // Path to your service account key JSON file
 const path = require("path");
 const figlet = require("figlet");
+const PORT = process.env.PORT
 
 const app = express();
 
@@ -28,7 +30,7 @@ const upload = multer({ dest: "uploads/" });
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  storageBucket: "ssgreports-c1304.appspot.com", // Replace 'your-storage-bucket-url' with your Firebase Storage bucket URL
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET, // Replace 'your-storage-bucket-url' with your Firebase Storage bucket URL
 });
 
 const bucket = admin.storage().bucket();
@@ -744,4 +746,6 @@ app.delete("/api/calculation-results/:id", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT, () => {});
+app.listen(PORT, () => {
+  console.log(` ${PORT}`);
+});
