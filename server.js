@@ -9,8 +9,18 @@ const bodyParser = require("body-parser");
 const admin = require("firebase-admin");
 const serviceAccount = require("./.firebase/service-account.json"); // Path to your service account key JSON file
 const path = require("path");
+const figlet = require("figlet");
 
 const app = express();
+
+figlet("ILMT Server", function (err, data) {
+  if (err) {
+    console.log("Something went wrong...");
+    console.dir(err);
+    return;
+  }
+  console.log(data);
+});
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -734,7 +744,4 @@ app.delete("/api/calculation-results/:id", (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(` ${PORT}`);
-});
+app.listen(process.env.PORT, () => {});
