@@ -6,8 +6,7 @@ const { Pool } = require("pg");
 const cors = require("cors");
 const pm2 = require("pm2");
 const bodyParser = require("body-parser");
-const admin = require("firebase-admin");
-const serviceAccount = require("./ssgreports-c1304-firebase-adminsdk-53u72-3d65e63ba8.json"); // Path to your service account key JSON file
+const serviceAccount = require(process.env.SERVICE_ACCOUNT);
 const path = require("path");
 
 const app = express();
@@ -18,7 +17,7 @@ const upload = multer({ dest: "uploads/" });
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  storageBucket: "ssgreports-c1304.appspot.com", // Replace 'your-storage-bucket-url' with your Firebase Storage bucket URL
+  storageBucket: "ssgreports-c1304.appspot.com",
 });
 
 const bucket = admin.storage().bucket();
